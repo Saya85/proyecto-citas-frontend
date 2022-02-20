@@ -11,6 +11,8 @@ import {
 import Layout from "./components/layaout";
 import Login from "./components/login";
 import Register from "./components/register";
+import Perfil from "./components/perfil";
+import Mascotas from "./components/mascotas";
 
 function App() {
   return (
@@ -20,6 +22,11 @@ function App() {
     <Route path="/" element={<Layout />}>
     <Route path='/login' element={<Login />} />
     <Route path='/register' element={<Register />} />
+    </Route>
+    <Route path="/perfil" element={<Perfil />}>
+    <Route path="/mascotas"element={<Mascotas/>}>
+      
+    </Route> 
     </Route>
     </Routes>
     </div>
