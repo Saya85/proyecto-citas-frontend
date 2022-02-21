@@ -1,5 +1,5 @@
 import { NavLink, Link, Outlet} from "react-router-dom";
-
+import ListaMascota from "./listaMascota"
 function Perfil() {
   let activeClassName = "underline"
   let liClassName = "nav-item";
@@ -17,7 +17,7 @@ function Perfil() {
             <li className={liClassName}>
               <NavLink className={({ isActive }) =>
                   isActive ? (navLink + ' ' + activeClassName) : navLink
-              } to="/mascotas">mascotas</NavLink>
+              } to="mascotas">mascotas</NavLink>
             </li>
             <li className={liClassName}>
               <NavLink className={({ isActive }) =>
@@ -40,7 +40,9 @@ function Perfil() {
         <div className="inner-margin">
           <div className="rounded d-flex justify-content-center">
             <div className="col-md-4 col-sm-12 shadow-lg p-5 bg-light">
-              <Outlet />
+              <Outlet/>
+              <li><Link to='listaMascota'>lista de mascotas</Link></li>
+             {/*  <li><Link to='regMascota'>registrar nueva mascota</Link></li> */}
             </div>
           </div>
         </div>
