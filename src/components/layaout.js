@@ -31,10 +31,10 @@ function Layout() {
       {/* An <Outlet> renders whatever child route is currently active,
           so you can think about this <Outlet> as a placeholder for
           the child routes we defined above. */}
-      <div className="container-fluid vh-100">
-        <div className="inner-margin">
-          <div className="rounded d-flex justify-content-center">
-            <div className="col-md-4 col-sm-12 shadow-lg p-5 bg-light">
+      <div >
+        <div >
+          <div >
+            <div >
               <Outlet />
             </div>
           </div>
