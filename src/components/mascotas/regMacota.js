@@ -3,7 +3,7 @@ import React from "react";
 class RegMascota extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {nombre:"", tipo:"", sexo:"" ,submitDone: false }
+    this.state = {nombre:"", tipo:"", submitDone: false }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
 }
@@ -35,19 +35,6 @@ render() {
                         <label className="row m-2">
                             <p className="col-6">Tipo:</p>
                             <input className="col-6" name="tipo" type='text' required onChange={this.handleChange}/>
-                        </label>
-                        <label className="row m-2">
-                            <p className="col-6 align-self-center">Sexo:</p>
-                            <div className="col-6 p-0 d-flex flex-column align-items-center">
-                                <div className="w-100 d-flex align-items-center justify-content-start">
-                                    <label className="col-3 justify-content-start d-flex"qwer>M</label>
-                                    <input name="sexo" required type='radio' />
-                                </div>
-                                <div className="w-100 d-flex align-items-center justify-content-start">
-                                    <label className="col-3 justify-content-start d-flex">H</label>
-                                    <input name="sexo" required type='radio' />
-                                </div>
-                            </div>
                         </label>
                     </div>
                 </form>

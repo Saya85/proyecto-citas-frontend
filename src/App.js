@@ -8,14 +8,14 @@ import {
   Redirect
 } from "react-router-dom";
 
-import Layout from "./components/layaout";
-import Login from "./components/login";
-import Register from "./components/register";
-import Perfil from "./components/perfil";
-import Mascotas from "./components/mascotas";
-import ListaMascota from "./components/listaMascota"
+import Layout from "./components/layout";
+import Login from "./components/users/login";
+import Register from "./components/users/register";
+import Perfil from "./components/users/perfil";
+import Mascotas from "./components/mascotas/mascotas";
+import ListaMascota from "./components/mascotas/listaMascota"
 import NoMatch from "./components/404";
-import Home from "./components/home";
+import Home from "./components/users/home";
 
 function App() {
   return (

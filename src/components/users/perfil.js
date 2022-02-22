@@ -1,5 +1,5 @@
 import { NavLink, Link, Outlet} from "react-router-dom";
-import ListaMascota from "./listaMascota"
+import CitasPend from "../citas/citasPend"
 function Perfil() {
   let activeClassName = "underline"
   let liClassName = "nav-item";
@@ -42,7 +42,7 @@ function Perfil() {
             <div >
               <Outlet/>
               <img src="http://www.guianativa.com.ar/wp-content/uploads/311245-Clinica-Veterinaria-Onavet-banner.jpg"></img>
-              <citaPendiente/>
+              <CitasPend/>
             </div>
           </div>
         </div>

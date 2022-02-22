@@ -48,6 +48,7 @@ class Login extends React.Component {
         <div className="text-center">
             <h3 className="text-primary">Sign In</h3>
         </div>
+        <div className="container d-flex flex-column align-items-between justify-content-center">
         <Form noValidate onSubmit={this.handleSubmit} validated={this.state.validated}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
@@ -70,6 +71,7 @@ class Login extends React.Component {
             Submit
           </Button>
         </Form>
+        </div>
       </div>
     );
   }
