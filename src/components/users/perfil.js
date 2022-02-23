@@ -1,5 +1,5 @@
 import { NavLink, Link, Outlet} from "react-router-dom";
-import CitasPend from "../citas/citasPend"
+
 function Perfil() {
   let activeClassName = "underline"
   let liClassName = "nav-item";
@@ -12,17 +12,17 @@ function Perfil() {
             <li className={liClassName}>
               <NavLink className={({ isActive }) =>
                   isActive ? (navLink + ' ' + activeClassName) : navLink
-              } to="/">Home</NavLink>
+              } to="/perfil">perfil</NavLink>
             </li> 
             <li className={liClassName}>
               <NavLink className={({ isActive }) =>
                   isActive ? (navLink + ' ' + activeClassName) : navLink
-              } to="mascotas">mascotas</NavLink>
+              } to="listaMascota">mascotas</NavLink>
             </li>
             <li className={liClassName}>
               <NavLink className={({ isActive }) =>
                   isActive ? (navLink + ' ' + activeClassName) : navLink
-              } to="/citas">citas</NavLink>
+              } to="citasPend">citas</NavLink>
             </li>
             <li className={liClassName}>
               <NavLink className={({ isActive }) =>
@@ -40,9 +40,9 @@ function Perfil() {
         <div>
           <div>
             <div >
-              <Outlet/>
+              
               <img src="http://www.guianativa.com.ar/wp-content/uploads/311245-Clinica-Veterinaria-Onavet-banner.jpg"></img>
-              <CitasPend/>
+              <Outlet/>
             </div>
           </div>
         </div>

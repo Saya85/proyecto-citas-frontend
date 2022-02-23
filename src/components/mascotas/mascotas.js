@@ -9,11 +9,11 @@ class Mascotas extends React.Component {
       error: null
     }
   }
-  componentDidMount() {
-    axios('http://localhost:3000/mascotas/mascotas')
+    componentDidMount() {
+    axios('http://localhost:3500/mascotas')
     .then(response => {
       this.setState({items: response.data, isLoaded: true})
-    })
+    }) 
     .catch(error => {
       this.setState({
         isLoaded: true,

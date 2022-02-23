@@ -21,6 +21,7 @@ const ListaMascota = () => {
                                 </li>
                             ))}
                         </ul>
+                        <Link to='/perfil/regMascota'>Añadir Mascota</Link>
                     </div>
                 </div>
             </div>

@@ -16,6 +16,11 @@ import Mascotas from "./components/mascotas/mascotas";
 import ListaMascota from "./components/mascotas/listaMascota"
 import NoMatch from "./components/404";
 import Home from "./components/users/home";
+import CitasMascota from "./components/citas/citasMacota";
+import RegMascota from "./components/mascotas/regMacota";
+import CitasMod from "./components/citas/citasMod";
+import CitasPend from "./components/citas/citasPend";
+
 
 function App() {
   return (
@@ -30,8 +35,14 @@ function App() {
           </Route>  
           <Route path="perfil" element={<Perfil />}>
               <Route path="mascotas"element={<Mascotas/>}/>
+             
               <Route path="listaMascota"element={<ListaMascota/>} />
+              <Route path="citas/:nombre"element={<CitasMascota/>}/>
+              <Route path="regMascota"element={<RegMascota/>}/>
+              <Route path="citasMod"element={<CitasMod/>}/>
+              <Route path="citasPend"element={<CitasPend/>}/>
               <Route path="*" element={<NoMatch />} />
+              
            </Route>   
         </Routes>
       </div>
