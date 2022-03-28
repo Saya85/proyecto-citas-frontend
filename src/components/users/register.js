@@ -2,27 +2,36 @@ import React from "react";
 
 import { Form, Button } from "react-bootstrap";
 import { Navigate } from "react-router-dom";
+import AuthService from "../../services/users"
 
 class Register extends React.Component {
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
         this.state = {nombre:"", apellidos:"", password: "", confPassword: "", email: "", submitDone: false, passwordMatch: false }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
-  } 
+    } 
 
-  handleChange(event){
-      this.setState({[event.target.name]: event.target.value})
-  }
+    handleChange(event){
+        this.setState({[event.target.name]: event.target.value})
+    }
 
-  handleSubmit(e){
+    async handleSubmit(e){
       e.preventDefault();
       if(this.state.confPassword != this.state.password) return(
           this.setState({passwordMatch: true})
       )
-      console.log('registrado');
-      console.log(this.state.nombre, this.state.email, this.state.password);
-      this.setState({submitDone: true})
+        console.log('registrado');
+        console.log(this.state.nombre, this.state.apellidos, this.state.email, this.state.password);
+      
+
+      AuthService.registrar(
+        this.state.nombre,
+        this.state.apellidos,
+        this.state.email,
+        this.state.password
+        ).then(this.setState({ submitDone:true }))
+
   }
 
   render(){
@@ -56,7 +65,7 @@ class Register extends React.Component {
                     <button className="mt-5" type="submit">Acceder</button>
                 </form>
                 {this.state.passwordMatch && <p className="passwordMatch">Las contraseñas no coinciden.</p>}
-                {this.state.submitDone && <Navigate to='/perfil'/>}
+              {/*   {this.state.submitDone && <Navigate to='/perfil'/>} */}
 
             </div>
         </div>

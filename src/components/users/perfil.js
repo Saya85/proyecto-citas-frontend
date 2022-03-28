@@ -27,7 +27,7 @@ function Perfil() {
             <li className={liClassName}>
               <NavLink className={({ isActive }) =>
                   isActive ? (navLink + ' ' + activeClassName) : navLink
-              } to="/logout">logout</NavLink>
+              } to="logout">logout</NavLink>
             </li>
           </ul>
         </div>
@@ -36,16 +36,9 @@ function Perfil() {
       {/* An <Outlet> renders whatever child route is currently active,
           so you can think about this <Outlet> as a placeholder for
           the child routes we defined above. */}
-      <div >
-        <div>
-          <div>
-            <div >
-              
+      <div  className="layout-perfil">
               <img src="http://www.guianativa.com.ar/wp-content/uploads/311245-Clinica-Veterinaria-Onavet-banner.jpg"></img>
               <Outlet/>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
